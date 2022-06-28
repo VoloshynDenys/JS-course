@@ -1390,10 +1390,16 @@ ask(
 	() => { alert("Вы отменили выполнение."); }
 );
 
-119
-
+120
 
 */
-let asd = 6;
-debugger;	//	cose stops; asd wont show
-console.log(asd);
+
+function hello(name) {
+	name = "John";
+	let phrase = `Hello, ${name}`;
+	say(phrase);
+}
+function say(phrase) {
+	alert(`** ${phrase} **`);
+};
+hello(name);
