@@ -1390,10 +1390,6 @@ ask(
 	() => { alert("Вы отменили выполнение."); }
 );
 
-120
-
-*/
-
 function hello(name) {
 	name = "John";
 	let phrase = `Hello, ${name}`;
@@ -1403,3 +1399,13 @@ function say(phrase) {
 	alert(`** ${phrase} **`);
 };
 hello(name);
+
+
+for (let asd = 0; asd < 5; asd++) {
+	console.log("number:", asd);
+}
+*/
+function pow(x, n) {
+	return 8;
+}
+pow(x, n);
