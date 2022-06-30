@@ -1536,3 +1536,17 @@ function multiplyNumeric(menu) {
 multiplyNumeric(menu);
 */
 
+function marry(man, woman) {
+	woman.husband = man;
+	man.wife = woman;
+
+	return {
+		father: man,
+		mom: woman,
+	}
+}
+
+let family = marry(
+	{ name: "John" },
+	{ name: "Ann" },
+);
