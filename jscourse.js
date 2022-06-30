@@ -1404,7 +1404,92 @@ hello(name);
 for (let asd = 0; asd < 5; asd++) {
 	console.log("number:", asd);
 }
+
+let user = {
+	name: `John`,
+	age: 30,
+	"im natural": true
+};
+console.log(user["im natural"]);
+console.log(user.age);
+user.isAdmin = true;
+delete user.age;
+
+let key = "likes birds";
+user[key] = true;
+alert(user[key]);
+
+let user = {
+	name: `John`,
+	age: `30`,
+};
+let key = prompt(`What do you want to know?`);
+console.log(user[key]);
+
+let fruit = prompt(`What is fruit?`, `apple`);
+let bag = {
+	[fruit]: 5,
+}
+console.log(bag[fruit]);
+
+let clothes = `jacket`;
+let magazine1 = {
+	[clothes + 1]: `20dollars`
+};
+console.log(magazine1[clothes + 1]);
+
+function makeUser(name, age) {
+	return {
+		name: name,
+		age: age,
+	}
+}
+let user = makeUser("John", 30);
+alert(user.name);	//	John
+
+function makeUser(name, age) {
+	return {
+	name, // то же самое, что и name: name
+	age // то же самое, что и age: age
+	// ...
+	};
+}
+	
+let user = {};
+alert(user.noSuchProperty === undefined);	//	true
+
+let user = {
+	name: `John`,
+	age: 20,
+};
+alert(`age` in user);	//	true
+alert(`no such property` in user);	//	false
+
+let user = {age: 30};
+let key = 'age';
+alert(key in user);
+
+let obj = {
+	test: undefined,
+};
+alert(obj.test);
+alert(`test` in obj);
+
+let user = {
+	name: `John`,
+	age: 30,
+	isAdmin: true
+};
+for (let key in user) {
+	alert(key);
+	alert(user[key]);
+}
 */
-function pow(x, n) {
-  return 8; // :) сжульничаем!
+let codes = {
+	"49": "Germany",
+	"41": "Switzerland",
+	"44": "United Kingdom",
+};
+for (let code in codes) {
+	alert(code);
 }
