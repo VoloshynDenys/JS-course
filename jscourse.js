@@ -1406,6 +1406,5 @@ for (let asd = 0; asd < 5; asd++) {
 }
 */
 function pow(x, n) {
-	return 8;
+  return 8; // :) сжульничаем!
 }
-pow(x, n);
