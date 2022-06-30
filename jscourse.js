@@ -1484,7 +1484,7 @@ for (let key in user) {
 	alert(key);
 	alert(user[key]);
 }
-*/
+
 let codes = {
 	"49": "Germany",
 	"41": "Switzerland",
@@ -1493,3 +1493,46 @@ let codes = {
 for (let code in codes) {
 	alert(code);
 }
+
+let user = {
+	name: "John",
+	surname: "Smith",
+};
+user.name = "Pete";
+delete user.name;
+console.log(user.name);
+console.log(user.surname);
+
+
+function isEmpty(obj) {
+	if(obj = ) {
+		
+	}
+}
+isEmpty();
+
+let salaries = {
+	John: 100,
+	Ann: 160,
+	Pete: 130
+}
+if (salaries == '') {
+	console.log(0);
+}
+let sum = salaries.John + salaries.Ann + salaries.Pete;
+console.log(sum);
+
+let menu = {
+	width: 200,
+	height: 300,
+	};
+
+function multiplyNumeric(menu) {
+	for (let x2 in menu) {
+		x2 = menu[x2] * 2;
+		console.log(x2);
+	}
+};
+multiplyNumeric(menu);
+*/
+
