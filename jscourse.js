@@ -1534,7 +1534,7 @@ function multiplyNumeric(menu) {
 	}
 };
 multiplyNumeric(menu);
-*/
+
 
 function marry(man, woman) {
 	woman.husband = man;
@@ -1550,3 +1550,61 @@ let family = marry(
 	{ name: "John" },
 	{ name: "Ann" },
 );
+
+
+let id = Symbol("id");
+let id1 = Symbol("id");
+let id2 = Symbol("id");
+alert(id1 == id2); // false
+
+let id = Symbol("id");
+alert(id); // TypeError: Cannot convert a Symbol value to a string
+
+
+let id = Symbol("id");
+alert(id.toString());
+
+let id = Symbol("id");
+alert(id.description); // id
+
+let user ={
+	name: "Den",
+};
+let id = Symbol("id");
+user[id] = 1;
+alert(user[id]);
+
+let id = Symbol("id");
+let user = {
+	name: "Den",
+	[id]: 123,
+}
+
+let id = Symbol("id");
+let user = {
+name: "Вася",
+age: 30,
+[id]: 123
+};
+for (let key in user) alert(key); // name, age (свойства с ключом-символом нет среди перечисленн
+// хотя прямой доступ по символу работает
+alert( "Напрямую: " + user[id] );
+
+
+let ageP = Symbol("ageS");
+let obj = {
+	name: "Den",
+	ageP: 16,
+}
+alert(obj.ageP);
+*/
+
+let user = {
+	name: "Den",
+	age: 16,
+};
+user.sayHi = function () {	// sayHi -	метод
+	alert("Hello!");
+};
+user.sayHi();
+
