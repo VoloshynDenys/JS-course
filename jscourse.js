@@ -1597,7 +1597,6 @@ let obj = {
 	ageP: 16,
 }
 alert(obj.ageP);
-*/
 
 let user = {
 	name: "Den",
@@ -1607,4 +1606,49 @@ user.sayHi = function () {	// sayHi -	метод
 	alert("Hello!");
 };
 user.sayHi();
+
+
+user = {
+	sayHi: function() {
+		alert("Hello!")
+	}
+}
+
+user = {
+	sayHi() {
+		alert("hello!")
+	}
+}
+
+let user = { name: "Джон" };
+let admin = { name: "Админ" };
+function sayHi() {
+alert( this.name );
+}
+sayHi();
+
+let obj = {
+	name: "Den",
+
+	showName() {
+		alert("Hello," + this.name)
+	}
+}
+obj.showName();
+*/
+
+
+let calculator = {
+	  
+	read() {
+		let figure1 = prompt("Figure1", '1');
+		let figure2 = prompt("Figure2", '1');
+		return 5;
+	},	
+	sum() {
+		alert(this.read.asd);
+	},
+}
+calculator.read();
+calculator.sum();
 
