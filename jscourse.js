@@ -1635,20 +1635,70 @@ let obj = {
 	}
 }
 obj.showName();
-*/
+
 
 
 let calculator = {
-	  
-	read() {
-		let figure1 = prompt("Figure1", '1');
-		let figure2 = prompt("Figure2", '1');
-		return 5;
-	},	
+
+	figure1: prompt("Figure1", '1'),
+	figure2: prompt("Figure2", '2'),
 	sum() {
-		alert(this.read.asd);
-	},
+		alert(this.sum.figure1)
+	}
 }
 calculator.read();
 calculator.sum();
 
+let username = {
+	uname: "Den",
+	age: 16,
+}
+console.log(username);
+console.log(username.uname)
+
+let firstPart = "likes";
+let userInfo = {
+	name: "Den",
+	age: 16,
+	[firstPart + " javascript"]: true,
+}
+console.log(userInfo["likes javascript"]);
+
+let firstPart = "likes";
+let userInfo = {
+	name: "Den",
+	age: 16,
+	[firstPart]: true,
+}
+console.log(userInfo[firstPart]);
+
+let key = "name";
+console.log(userInfo[key]);
+
+
+let calculator = {
+
+	read: {
+		figure1: prompt("Figure1", '1'),
+		figure2: prompt("Figure2", '2'),
+	},
+
+	
+}
+
+console.log(calculator.read["figure1"] * calculator.read["figure2"]);
+console.log(calculator.read.figure1)
+*/
+
+let calculator = {
+	read() {
+		figure1: prompt("Figure1", '1');
+		figure2: prompt("Figure2", '2');
+	},
+
+	sum() {
+		return this.read["figure1"] + this.read["figure2"];
+	},
+}
+calculator.read();
+console.log(calculator.sum);
