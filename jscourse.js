@@ -1688,7 +1688,7 @@ let calculator = {
 
 console.log(calculator.read["figure1"] * calculator.read["figure2"]);
 console.log(calculator.read.figure1)
-*/
+
 
 let calculator = {
 	read() {
@@ -1701,4 +1701,50 @@ let calculator = {
 	},
 }
 calculator.read();
-console.log(calculator.sum);
+console.log(calculator.sum());
+
+
+let calculator = {
+	read() {
+		figure1: prompt("Figure 1", "");
+		figure2: prompt("Figure2", "");
+	},
+
+	sum
+	
+}
+calculator.read();
+calculator.sum();
+
+
+
+let calculator = {
+	read() {
+		figure1: +prompt("Figure1");
+		figure2: +prompt("Figure2");
+	},
+
+	sum() {
+		return this.read["figure1"] + this.read["figure2"];
+	},
+}
+calculator.read();
+console.log(calculator.sum());
+*/
+
+
+let calculator = {
+	read() {
+		figure1: +prompt("1");
+		figure2: +prompt("2");
+	},
+	sum() {
+		doo: console.log(this["figure1"]);
+	},
+	mul() {
+		dooo: console.log(this["figure1"] + this["figure2"]);
+	},
+};
+	calculator.read();
+	alert( calculator.sum() );
+	alert( calculator.mul() );
