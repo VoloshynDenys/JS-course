@@ -1730,7 +1730,7 @@ let calculator = {
 }
 calculator.read();
 console.log(calculator.sum());
-*/
+
 
 
 let calculator = {
@@ -1748,3 +1748,61 @@ let calculator = {
 	calculator.read();
 	alert( calculator.sum() );
 	alert( calculator.mul() );
+
+
+let calculator = {
+	read() {
+		figure1: +prompt("Figure 1");
+		figure2: +prompt("Figure 2");
+	},
+	sum() {5},
+
+};
+calculator.read();
+alert(calculator.read.figure1);
+alert( calculator.sum() );
+
+let calculator = {
+	read() {
+		figure1: +prompt("Figure 1");
+	},
+};
+calculator.read();
+
+let obj1 = {
+	name: "Den"
+};
+let obj2 = {
+	age: 20,
+}
+let newObj = Object.assign({}, obj1, obj2);
+console.log(newObj);
+
+hello();
+function hello() {
+	console.log("Hello, World!");
+};
+let person = {
+	name: 'Den',
+	age: 15,
+	sayhello: hello
+};
+console.log(person.sayhello);
+
+
+let calculator = {
+	read() {
+		this.figure1 = +prompt("Figure1", 1);
+		this.figure2 = +prompt("Figure2", 2);
+	},
+	sum() {
+	  return this.figure1 + this.figure2;
+	},
+	mul() {
+		return this.figure1 * this.figure2;
+	},
+};
+calculator.read();
+alert( calculator.sum() );
+alert(calculator.mul());
+*/
