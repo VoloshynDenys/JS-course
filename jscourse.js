@@ -1842,7 +1842,7 @@ let user = {
 alert(user); // hint: string -> {name: "John"}
 alert(+user); // hint: number -> 1000
 alert(user + 500); // hint: default -> 1500
-*/	
+	
 
 let user = {
 	name: "John",
@@ -1856,3 +1856,71 @@ let user = {
 	alert(user); // hint: string -> {name: "John"}
 	alert(+user); // hint: number -> 1000
 	alert(user + 500); // hint: default -> 1500
+
+
+let id = Symbol("asd");
+alert(id.toString());
+
+let id = Symbol("asd");
+alert(id.description);
+
+let user = {
+	name: "Den",
+};
+let id = Symbol("description");
+user[id] = 1;
+alert(user[id]);
+
+
+let user = {
+	name: "Den",
+	hi() {
+		alert(this.name);
+	},
+	bye() {
+		alert("Goodbye")
+	},
+}
+user.hi();
+
+let calculator = {
+	read() {
+		this.figure1 = +prompt("Figure1", 1);
+		this.figure2 = +prompt("Figure2", 2);
+	},
+	sum() {
+		return this.figure1 + this.figure2;
+	},
+	mul() {
+		return this.figure1 * this.figure2;
+	},
+};
+calculator.read();
+alert( calculator.sum() );
+alert(calculator.mul());
+
+let calculator = {
+	read() {
+		this.figure1 = +prompt("Figure1", 1);
+		this.figure2 = +prompt("Figure2", 2);
+	},
+	sum() {
+	  return this.figure1 + this.figure2;
+	},
+	mul() {
+		return this.figure1 * this.figure2;
+	},
+};
+calculator.read();
+alert( calculator.sum() );
+alert(calculator.mul());
+*/
+
+let user = {
+	name: "den",
+	afe: 16,
+}
+
+[Symbol.toPrimitive](hint) {
+	alert()
+}
