@@ -1914,13 +1914,87 @@ let calculator = {
 calculator.read();
 alert( calculator.sum() );
 alert(calculator.mul());
-*/
+
 
 let user = {
 	name: "den",
-	afe: 16,
-}
+	age: 16,
 
-[Symbol.toPrimitive](hint) {
-	alert()
+	[Symbol.toPrimitive](hint) {
+		alert(`hint: ${hint}`);
+	return hint == "string" ? `{name:"${this.name}"}` : this.age;
+	}
 }
+alert(user); // hint: string -> {name: "John"}
+alert(+user); // hint: number -> 1000
+alert(user + 500); // hint: default -> 1500
+
+
+
+
+
+
+
+
+
+
+Math.floor(1.23); // 1 всегда округляет в меньшую сторону
+Math.round(1.23); // 1 работает по правилам математики
+Math.ceil(1.23) // 2 округляет в большую сторону
+
+let num = 123.456;
+console.log(num.toFixed(2)); // 123.46 указываем сколько знаков после запятой оставить
+
+console.log(Math.random() * 100 1-100); // выводит рандомное число 0-1;  Math.random() * число, выводит рандомное число до введеного после *
+
+console.log(Math.max(234, 4324, 234, 234234, 234)); // выводит наибольшее число
+
+let userOne = {
+	userAge: 34 
+};
+let userTwo = {
+	userAge: 45
+};
+let olderUser console.log(Math.max(userOne.userAge, userTwo.userAge)); // 45
+
+Math.min() - тоже самое только с минусом
+
+console.log(Math.pow(2, 3)); // 2  в степени 3 = 8 (2 ** 3)
+
+let value = "123";
+let valueNumber = +value; // преобразование в число
+console.log(typeof value);
+
+let parsee = "112.65"; // if 112.65 - 112; if "112px" - 112; "px112" - NaN
+console.log(parseInt(parsee));
+
+let parsee = "112.65"; // if 112.65 - 112,65; if "112px" - 112; "px112" - NaN
+console.log(parseFloat(parsee));
+
+let num = 123;
+console.log(typeof num);
+console.log(typeof num.toString());
+
+let num = NaN;
+console.log(isNaN(num)); // true if its NaN
+console.log(isFinite(num)); // if its NaN or +-Infinity its true
+
+
+
+
+
+let str = `Den`;
+console.log(str.toLocaleLowerCase()); // den
+console.log(str.toLocaleUpperCase()); //  DEN
+
+let str = "123456789asd";
+console.log(str.length);	//	12 - its str's length
+
+let str = "123456789asd";
+console.log(str[1]);	//	2
+console.log(str[6]);	//	7
+console.log(str[11]);	//	d
+*/
+let str = "Hello, My name is Den ";
+console.log(str.slice(7, 21));	//	My name is Den
+console.log(str.slice(-4, -1));	//	Den
