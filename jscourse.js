@@ -1994,7 +1994,18 @@ let str = "123456789asd";
 console.log(str[1]);	//	2
 console.log(str[6]);	//	7
 console.log(str[11]);	//	d
-*/
+
 let str = "Hello, My name is Den ";
 console.log(str.slice(7, 21));	//	My name is Den
 console.log(str.slice(-4, -1));	//	Den
+
+let str = "Hello, My name is Den!";
+console.log(str.indexOf(`is`));	//	15
+console.log(str.indexOf(`My name is Den!`));	//	7
+let str2 = `game1 word game2 word game3`;
+console.log(str2.indexOf(`game`, 6));	//	11; второе значение указывает с какого индекса начинать 
+
+let str = "Hello, My name is Den! Hello, My name is Ruslan!";
+console.log(str.lastIndexOf(`M`));	//	30; ищет с конца
+console.log(str.lastIndexOf(`My name is Den!`));	//	7
+*/
