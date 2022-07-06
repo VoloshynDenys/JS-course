@@ -2077,6 +2077,14 @@ console.log(`g`.codePointAt());	//	103
 console.log(` `.codePointAt());	//	32
 console.log(`&`.codePointAt());	//	38
 console.log(`&` > ` `); // true (38 > 32)
-*/
+
 // чтобы узнать, какой символ стоит на порядковом номере, например 2876
 console.log(String.fromCodePoint(2876)); // ଼
+*/
+
+// localCompare() используются для сравнения натом языке на котором написаны
+console.log(`d`.localeCompare(`l`));	// -1 (d < l) первое меньше
+console.log(`d`.localeCompare(`d`));	// 0 (d = d) равны
+console.log(`l`.localeCompare(`d`));	// 1 (l > d) первое больше
+console.log(`d`.codePointAt());	//	100
+console.log(`l`.codePointAt());	//	108
