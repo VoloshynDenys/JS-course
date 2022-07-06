@@ -2008,10 +2008,26 @@ console.log(str2.indexOf(`game`, 6));	//	11; второе значение ук�
 let str = "Hello, My name is Den! Hello, My name is Ruslan!";
 console.log(str.lastIndexOf(`M`));	//	30; ищет с конца
 console.log(str.lastIndexOf(`My name is Den!`));	//	7
-*/
+
 let str = "Hello, My name is Den! Hello, My name is Ruslan!";
 console.log(str.includes(`Hello`));	// true
 console.log(str.includes(`My name is Den!`));	//	true
 console.log(str.includes(`My name is Anna!`));	//	false
 // includes is for using in if{}else{}
+*/
+
+
+let textStr = "Hello, My name is Den! Hello, My name is Ruslan!";
+console.log(textStr.split(" "));	//	(10) ['Hello,', 'My', 'name', 'is', 'Den!', 'Hello,', 'My', 'name', 'is', 'Ruslan!']
+// 0: "Hello,"
+// 1: "My"
+// 2: "name"
+// 3: "is"
+// 4: "Den!"
+// 5: "Hello,"
+// 6: "My"
+// 7: "name"
+// 8: "is"
+// 9: "Ruslan!"
+// length: 10
 
