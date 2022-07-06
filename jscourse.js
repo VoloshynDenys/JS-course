@@ -2064,7 +2064,7 @@ console.log(textStr.trim());	//	"den256kop@ gmail. com"
 
 let textStr = "Hello, My name is Den!";
 console.log(textStr.repeat(2));	//	Hello, My name is Den!Hello, My name is Den!
-*/
+
 
 
 let  a = `abc`;
@@ -2077,4 +2077,6 @@ console.log(`g`.codePointAt());	//	103
 console.log(` `.codePointAt());	//	32
 console.log(`&`.codePointAt());	//	38
 console.log(`&` > ` `); // true (38 > 32)
-
+*/
+// чтобы узнать, какой символ стоит на порядковом номере, например 2876
+console.log(String.fromCodePoint(2876)); // ଼
