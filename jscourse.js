@@ -2080,7 +2080,7 @@ console.log(`&` > ` `); // true (38 > 32)
 
 // чтобы узнать, какой символ стоит на порядковом номере, например 2876
 console.log(String.fromCodePoint(2876)); // ଼
-*/
+
 
 // localCompare() используются для сравнения натом языке на котором написаны
 console.log(`d`.localeCompare(`l`));	// -1 (d < l) первое меньше
@@ -2088,3 +2088,172 @@ console.log(`d`.localeCompare(`d`));	// 0 (d = d) равны
 console.log(`l`.localeCompare(`d`));	// 1 (l > d) первое больше
 console.log(`d`.codePointAt());	//	100
 console.log(`l`.codePointAt());	//	108
+
+
+let firstPart  = `likes`;
+let userInfo = {
+	name: "Den",
+	age: 16,
+	firstpart: firstPart
+}
+console.log(userInfo.firstpart);	//	likes
+
+let firstPart  = `likes`;
+let userInfo = {
+	name: "Den",
+	age: 16,
+	[firstPart]: true,
+}
+let key = `name`;
+console.log(userInfo[key]);
+
+// имя свойство объекта всегда является строкой, например:
+let userInfo = {
+	123: `meaning`,
+}
+//	console.log(userInfo.123)	mistake
+console.log(userInfo[`123`]);
+
+
+let userInfo = {
+	name: `Den`,
+	age: `16`,
+	addres: {
+		city: `Odessa`,
+		street: `Letnya`,
+	},
+};
+console.log(userInfo);
+console.log(userInfo.addres);
+console.log(userInfo.addres.city);
+
+
+function makeUserInfo(name, age) {
+	return {
+		name,
+		age,
+	}
+}
+let user = makeUserInfo(`Den`, `16`);
+console.log(user);
+console.log(user.name);
+
+let userInfo = {
+	name: `Den`,
+};
+console.log(userInfo.name);
+userInfo.age = 16;
+console.log(userInfo);
+userInfo[`likes js`] = true;
+console.log(userInfo);
+userInfo.addres = {
+	city: `Odessa`,
+	street: `Letnya`,
+}
+console.log(userInfo.addres);
+delete userInfo[`likes js`];
+console.log(userInfo);
+
+let userInfo = {
+	name: `Den`,
+};
+console.log(userInfo.name);
+userInfo.name = `Denys`;
+console.log(userInfo.name);
+
+const userInfo = {
+	name: `Den`,
+};
+console.log(userInfo.name);
+userInfo.name = `Denys`;
+console.log(userInfo.name);
+
+let userInfo = {
+	name: `Den`,
+};
+console.log(userInfo.name);
+let user = userInfo;
+user.name = `Denys`;	//	changing also in userInfo
+console.log(userInfo.name);	//	so it shows Denys
+
+
+
+// Object.assign(where)(object), what(svoystvo #1), what(svoystvo # 2), ...);
+let userInfo = {
+	name: `Den`,
+	age: 16,
+};
+let user = Object.assign({}, userInfo.name);
+user.name = `denys`;
+console.log(user.name);
+console.log(userInfo.name);
+
+let userInfo = {
+	name: `Den`,
+	age: 16,
+};
+Object.assign(userInfo, {
+	[`likes js`]: true, 
+	addres: {
+		city: `Odessa`,
+		street: `Letnya`,
+	},
+});
+console.log(userInfo);
+
+let userInfo = {
+	name: `Den`,
+	age: 16,
+	// addres: {
+	// 	city: `Odessa`,
+	// 	street: `Letnya`,
+	// },
+};
+console.log(userInfo?.addres?.street);	//	опциональная цепочка; вместо ошибки выводит undfefined
+
+let userInfo = {
+	name: `Den`,
+	age: 16,
+	addres: {
+		city: `Odessa`,
+		street: `Letnya`,
+	},
+};
+if (`name` in userInfo){
+	console.log(userInfo.name)
+}
+
+let userInfo = {
+	name: undefined,
+
+}
+if (userInfo.name) {
+	console.log(userInfo.name)	//	nothing
+}
+
+let userInfo = {
+	name: undefined,
+
+}
+if (`name` in userInfo) {
+	console.log(userInfo.name);	//	undefined
+}
+
+let userInfo = {
+	name: `Den`,
+	age: 16,
+	addres: {
+		city: `Odessa`,
+		street: `Letnya`,
+	},
+};
+for (let key in userInfo) {
+	console.log(key);	//	выводит свойство
+	console.log(userInfo[key]);	//	выводит значение свойств
+};
+for (let key2 in userInfo.addres) {
+	console.log([key2]);
+}
+ */
+
+
