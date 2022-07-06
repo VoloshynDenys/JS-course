@@ -2046,9 +2046,18 @@ console.log(res); // ['Hello', 'World', '!']
 console.log(res.join(`|`)); // соединяем обратно; Hello|World|!
 
 console.log([1, 2, 3].join("number"));	// 1number2number3
-*/
+
 let hello = `Hello World`;
 let showHello = hello.split(" ");
 console.log(showHello.join("_")); //	Hello_World
 
+
+let textStr = "   den256kop@gmail.com   ";
+console.log(textStr);	//	"   den256kop@gmail.com   "
+console.log(textStr.trim());	//	"den256kop@gmail.com"
+*/
+let textStr = "   den256kop@ gmail. com   ";
+console.log(textStr);	//	"   den256kop@ gmail. com   "
+console.log(textStr.trim());	//	"den256kop@ gmail. com"
+// trim убирает пробелы в начале и в конце
 
