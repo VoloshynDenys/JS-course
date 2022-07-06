@@ -2014,7 +2014,7 @@ console.log(str.includes(`Hello`));	// true
 console.log(str.includes(`My name is Den!`));	//	true
 console.log(str.includes(`My name is Anna!`));	//	false
 // includes is for using in if{}else{}
-*/
+
 
 
 let textStr = "Hello, My name is Den! Hello, My name is Ruslan!";
@@ -2030,4 +2030,25 @@ console.log(textStr.split(" "));	//	(10) ['Hello,', 'My', 'name', 'is', 'Den!',
 // 8: "is"
 // 9: "Ruslan!"
 // length: 10
+
+
+let textStr = "Hello, My name is Den! Hello, My name is Ruslan!";
+let res = textStr.split(" "); 
+console.log(res.join(` `)); // соединяем обратно
+
+let textStr = "Hello|World|!";
+let res = textStr.split("|"); 
+console.log(res); // ['Hello', 'World', '!']
+// 0: "Hello"
+// 1: "World"
+// 2: "!"
+// length: 3
+console.log(res.join(`|`)); // соединяем обратно; Hello|World|!
+
+console.log([1, 2, 3].join("number"));	// 1number2number3
+*/
+let hello = `Hello World`;
+let showHello = hello.split(" ");
+console.log(showHello.join("_")); //	Hello_World
+
 
