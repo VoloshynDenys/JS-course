@@ -2055,9 +2055,13 @@ console.log(showHello.join("_")); //	Hello_World
 let textStr = "   den256kop@gmail.com   ";
 console.log(textStr);	//	"   den256kop@gmail.com   "
 console.log(textStr.trim());	//	"den256kop@gmail.com"
-*/
+
 let textStr = "   den256kop@ gmail. com   ";
 console.log(textStr);	//	"   den256kop@ gmail. com   "
 console.log(textStr.trim());	//	"den256kop@ gmail. com"
 // trim убирает пробелы в начале и в конце
+
+*/
+let textStr = "Hello, My name is Den!";
+console.log(textStr.repeat(2));	//	Hello, My name is Den!Hello, My name is Den!
 
