@@ -2009,3 +2009,9 @@ let str = "Hello, My name is Den! Hello, My name is Ruslan!";
 console.log(str.lastIndexOf(`M`));	//	30; ищет с конца
 console.log(str.lastIndexOf(`My name is Den!`));	//	7
 */
+let str = "Hello, My name is Den! Hello, My name is Ruslan!";
+console.log(str.includes(`Hello`));	// true
+console.log(str.includes(`My name is Den!`));	//	true
+console.log(str.includes(`My name is Anna!`));	//	false
+// includes is for using in if{}else{}
+
