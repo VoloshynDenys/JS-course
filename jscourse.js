@@ -2061,7 +2061,20 @@ console.log(textStr);	//	"   den256kop@ gmail. com   "
 console.log(textStr.trim());	//	"den256kop@ gmail. com"
 // trim убирает пробелы в начале и в конце
 
-*/
+
 let textStr = "Hello, My name is Den!";
 console.log(textStr.repeat(2));	//	Hello, My name is Den!Hello, My name is Den!
+*/
+
+
+let  a = `abc`;
+let b = `bcd`;
+console.log(a > b);	//	false
+// каждый символ имеет свой порядковый номер в юникод; когда мы сравниваем
+//например а > б, мы сравниваем 1072 > 1073, поэтому фолс
+// чтобы узнать порядковый номер, используется codePointAt(`symbol`);
+console.log(`g`.codePointAt());	//	103
+console.log(` `.codePointAt());	//	32
+console.log(`&`.codePointAt());	//	38
+console.log(`&` > ` `); // true (38 > 32)
 
