@@ -2310,4 +2310,54 @@ function UserInfo(name) {
 	// return this; возвращается объект
 }
 console.log(new UserInfo(name));
+
+let userInfo = {
+	name:"Den",
+	age: 16,
+	"57": "Meainig",
+}
+console.log(userInfo[57]);
+
+let userInfo = {
+	name:"Den",
+	age: 16,
+}
+console.log(userInfo.age);
+let user= userInfo;
+user.age = 50;
+console.log(userInfo.age);
+
+let userInfo = {
+	name:"Den",
+	age: 16,
+
+	showInfo() {
+		console.log(this.name);
+	}
+}
+let user = userInfo;
+userInfo = null;
+console.log(user.name);
+
+
+let userInfo = {
+	name: "Den",
+	age: 16,
+
+	addres: {
+		city: `Odessa`
+	},
+};
+for (let key in userInfo.addres) {
+	console.log(userInfo.addres[key]);
+};
 */
+let userInfo = {
+	name: `Den`,
+	age: 16,
+}
+userInfo.name = `Lena`;
+console.log(userInfo.name);
+delete userInfo.name;
+console.log(userInfo);
+
