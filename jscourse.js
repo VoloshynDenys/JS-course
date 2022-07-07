@@ -2254,6 +2254,60 @@ for (let key in userInfo) {
 for (let key2 in userInfo.addres) {
 	console.log([key2]);
 }
- */
 
 
+let userInfo = {
+	name: `Den`,
+	age: 16,
+	addres: {
+		city: `Odessa`,
+		street: `Letnya`,
+	},
+
+	showInfo: function () {
+		console.log(`${this.addres.city}`)
+	}
+};
+userInfo.showInfo();
+
+let userInfo = {
+	name: `Den`,
+	age: 16,
+	addres: {
+		city: `Odessa`,
+		street: `Letnya`,
+	},
+
+	showInfo: function () {
+		let show = () => console.log(`${this.addres.city}`);
+		show();
+	},
+};
+userInfo.showInfo();
+
+let userInfo = {
+	name: `Den`,
+	age: 16,
+	addres: {
+		city: `Odessa`,
+		street: `Letnya`,
+	},
+
+	showInfo: function () {
+		console.log(`${this.addres.city}`)
+	}
+};
+userInfo.showInfo();
+
+let user = userInfo;
+userInfo = null;
+user.showInfo();
+
+function UserInfo(name) {
+	//this = {} создается пустой объект
+	this.name = prompt("Name", "");
+	this.age = 30;
+	// return this; возвращается объект
+}
+console.log(new UserInfo(name));
+*/
