@@ -2351,7 +2351,7 @@ let userInfo = {
 for (let key in userInfo.addres) {
 	console.log(userInfo.addres[key]);
 };
-*/
+
 let userInfo = {
 	name: `Den`,
 	age: 16,
@@ -2360,4 +2360,85 @@ userInfo.name = `Lena`;
 console.log(userInfo.name);
 delete userInfo.name;
 console.log(userInfo);
+
+
+let user = {
+	name: 'Denys',
+	age: 16,
+
+	[Symbol.toPrimitive](hint) {
+		alert(`hint: ${hint}`);
+		return hint == `string` ? `{name: "${this.name}"}` : this.age;
+	}
+}
+alert(user);	//	string
+alert(+user);	// number
+alert(user + 500);	//	default
+
+
+let user = {
+	name: 'Denys',
+	age: 16,
+
+	// strinf
+	toString() {
+		return `{name: "${this.name}"}`;
+	},
+
+	// number/default
+	valueOf() {
+		return this.age;
+	},
+};
+alert(user);	//	string
+alert(+user);	// number
+alert(user + 500);	//	default
+
+
+let user = {
+	name: "John",
+	toString() {
+	return this.name;
+	}
+	};
+	alert(user); // toString -> John
+alert(user + 500); // toString -> John500
+
+
+//	В отсутствие Symbol.toPrimitive и valueOf , toString обработает все случаи
+// преобразований к примитивам.
+
+function User(name) {
+	this.name = name;
+	this.isAdmin = false;
+}
+
+let user = new User("Denys");
+alert(user.name);
+alert(user.isAdmin);
+
+function User() {
+	console.log(new.target);
+}
+new User();
+
+function User(name) {
+	if (!new.target) {
+		return new User(name);
+	}
+	this.name = name;
+}
+let denys = User("Denys");
+alert(denys.name);
+*/
+function User(name) {
+	this.name = name;
+
+	this.sayHi = function () {
+		alert(`My name is ` + this.name);
+	};
+}
+let denys = new User("Denys");
+denys.sayHi();
+
 
