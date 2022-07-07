@@ -2430,7 +2430,7 @@ function User(name) {
 }
 let denys = User("Denys");
 alert(denys.name);
-*/
+
 function User(name) {
 	this.name = name;
 
@@ -2440,5 +2440,15 @@ function User(name) {
 }
 let denys = new User("Denys");
 denys.sayHi();
+*/
 
+function A() {
+	this.name = `Denys`
+}
 
+function B() {
+	this.name = `Denys`
+}
+let a = new A;
+let b = new B;
+alert( a == b ); // true
