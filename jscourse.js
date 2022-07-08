@@ -2454,7 +2454,7 @@ let b = new B;
 alert( a == b ); // true
 
 
-*/
+
 function Calculator() {
 	this.read = function () {
 		this.figure1 = +prompt("Figure1", 1);
@@ -2473,7 +2473,23 @@ let calculator = new Calculator();
 calculator.read();
 console.log(calculator.sum());
 console.log(calculator.mul());
+*/
 
+function Accumulator(startingValue) {
+	this.value = startingValue;
 
+	this.read = function() {
+		this.figure = +prompt("Figure", 6);
+	}
 
+	this.sum = function() {
+		return this.value + this.figure;
+	}
+}
+let accumulator = new Accumulator(9); 
+console.log(accumulator.value);
+accumulator.read();
+console.log(accumulator.figure);
+console.log(accumulator.sum);
+console.log(accumulator.sum());
 
