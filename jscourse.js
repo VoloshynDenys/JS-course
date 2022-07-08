@@ -2440,7 +2440,7 @@ function User(name) {
 }
 let denys = new User("Denys");
 denys.sayHi();
-*/
+
 
 function A() {
 	this.name = `Denys`
@@ -2452,3 +2452,28 @@ function B() {
 let a = new A;
 let b = new B;
 alert( a == b ); // true
+
+
+*/
+function Calculator() {
+	this.read = function () {
+		this.figure1 = +prompt("Figure1", 1);
+		this.figure2 = +prompt("Figure2", 2);
+	}
+
+	this.sum = function() {
+		return this.figure1 + this.figure2;
+	}
+
+	this.mul = function() {
+		return this.figure1 * this.figure2;
+	}
+}
+let calculator = new Calculator();
+calculator.read();
+console.log(calculator.sum());
+console.log(calculator.mul());
+
+
+
+
