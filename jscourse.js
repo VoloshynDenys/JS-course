@@ -2473,7 +2473,7 @@ let calculator = new Calculator();
 calculator.read();
 console.log(calculator.sum());
 console.log(calculator.mul());
-*/
+
 
 function Accumulator(startingValue) {
 	this.value = startingValue;
@@ -2492,4 +2492,45 @@ accumulator.read();
 console.log(accumulator.figure);
 console.log(accumulator.sum);
 console.log(accumulator.sum());
+
+alert( typeof "s" ); // "число"
+alert( typeof new Number("s") ); // "object"!
+
+
+let zero = new Number(0);
+if (zero) {
+// zero возвращает "true", так как является объектом
+alert( "zero имеет «истинное» значение?!?" );
+}
+
+
+let str = String(123);
+console.log(typeof(str)); 
+
+
+// Все примитивы, кроме null и undefined , предоставляют множество полезных
+// методов. Мы познакомимся с ними поближе в следующих главах.
+// Формально эти методы работают с помощью временных объектов, но движки JavaScript
+// внутренне очень хорошо оптимизируют этот процесс, так что их вызов не требует много
+// ресурсов.
+
+// Данный пример наглядно показывает, что примитивы не являются объектами.
+
+console.log(6.23e2);	//	623
+console.log(0.000001);
+console.log(2e-4);	//	0.0002
+console.log()
+
+alert( 0xff ); // 255
+alert( 0xFF ); // 255 (тоже самое, регистр не имеет значения)
+
+let a = 0b11111111; // бинарная форма записи числа 255
+let b = 0o377; // восьмеричная форма записи числа 255
+alert(a == b); // true, с двух сторон число 255
+*/
+
+
+
+
+
 
